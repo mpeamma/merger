@@ -21,11 +21,12 @@ for commit_hash in commits:
             print(git.cherry_pick(commit_hash, m=1))
         else:
             print(git.cherry_pick(commit_hash))
-    except:
+    except Exception as error:
         if len(successful_commits) > 0:
             print(Fore.GREEN + "Successful commits:")
             [print(x) for x in successful_commits]
-        print(Fore.RED + "Failed on " + commit_hash)
+        print(Fore.RED + error)
+        print("Failed on " + commit_hash)
         print("Commits left to cherry-pick:")
         [print(x) for x in commits if x not in successful_commits]
         print(Style.RESET_ALL)
