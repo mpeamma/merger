@@ -25,7 +25,7 @@ for commit_hash in commits:
         if len(successful_commits) > 0:
             print(Fore.GREEN + "Successful commits:")
             [print(x) for x in successful_commits]
-        print(Fore.RED + error)
+        print(Fore.RED + str(error))
         print("Failed on " + commit_hash)
         print("Commits left to cherry-pick:")
         [print(x) for x in commits if x not in successful_commits]
