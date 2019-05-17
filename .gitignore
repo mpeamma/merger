@@ -1,0 +1,6 @@
+.Python
+commits
+lib/**
+bin/**
+include/**
+.idea/**

@@ -9,7 +9,7 @@ if len(sys.argv) < 2:
     exit()
 
 init(convert=True)
-	
+
 commits = [x.strip() for x in open(sys.argv[1], "r").readlines()]
 successful_commits = []
 
